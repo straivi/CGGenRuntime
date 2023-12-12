@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A64956512B0ECF9800E889AB /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64956502B0ECF9800E889AB /* ContentViewModel.swift */; };
+		A65DDF532B16EF6900A67FEC /* Base in Frameworks */ = {isa = PBXBuildFile; productRef = A65DDF522B16EF6900A67FEC /* Base */; };
+		A65DDF552B16EF6900A67FEC /* BCRunner in Frameworks */ = {isa = PBXBuildFile; productRef = A65DDF542B16EF6900A67FEC /* BCRunner */; };
+		A65DDF572B16EF6900A67FEC /* libcggen in Frameworks */ = {isa = PBXBuildFile; productRef = A65DDF562B16EF6900A67FEC /* libcggen */; };
+		A65DDF592B16F46200A67FEC /* shapes.svg in Resources */ = {isa = PBXBuildFile; fileRef = A65DDF582B16F46200A67FEC /* shapes.svg */; };
 		A6F3B7832AF14C1A0058EC83 /* CGGenTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3B7822AF14C1A0058EC83 /* CGGenTestApp.swift */; };
 		A6F3B7852AF14C1A0058EC83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3B7842AF14C1A0058EC83 /* ContentView.swift */; };
 		A6F3B7872AF14C1B0058EC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F3B7862AF14C1B0058EC83 /* Assets.xcassets */; };
 		A6F3B78A2AF14C1B0058EC83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F3B7892AF14C1B0058EC83 /* Preview Assets.xcassets */; };
+		A6F3B7922AF160630058EC83 /* cggen-bc-runner in Frameworks */ = {isa = PBXBuildFile; productRef = A6F3B7912AF160630058EC83 /* cggen-bc-runner */; };
+		A6F3B7942AF160630058EC83 /* cggen in Frameworks */ = {isa = PBXBuildFile; productRef = A6F3B7932AF160630058EC83 /* cggen */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A64956502B0ECF9800E889AB /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		A65DDF582B16F46200A67FEC /* shapes.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = shapes.svg; sourceTree = "<group>"; };
 		A6F3B77F2AF14C1A0058EC83 /* CGGenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGGenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F3B7822AF14C1A0058EC83 /* CGGenTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGGenTestApp.swift; sourceTree = "<group>"; };
 		A6F3B7842AF14C1A0058EC83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A6F3B7862AF14C1B0058EC83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6F3B7892AF14C1B0058EC83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A6F3B7962AF2712A0058EC83 /* cggen */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = cggen; path = ../../cggen; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +36,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F3B7922AF160630058EC83 /* cggen-bc-runner in Frameworks */,
+				A65DDF532B16EF6900A67FEC /* Base in Frameworks */,
+				A6F3B7942AF160630058EC83 /* cggen in Frameworks */,
+				A65DDF552B16EF6900A67FEC /* BCRunner in Frameworks */,
+				A65DDF572B16EF6900A67FEC /* libcggen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A65DDF512B16EF6900A67FEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A6F3B7762AF14C1A0058EC83 = {
 			isa = PBXGroup;
 			children = (
+				A6F3B7952AF2712A0058EC83 /* Packages */,
 				A6F3B7812AF14C1A0058EC83 /* CGGenTest */,
 				A6F3B7802AF14C1A0058EC83 /* Products */,
+				A65DDF512B16EF6900A67FEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +75,10 @@
 		A6F3B7812AF14C1A0058EC83 /* CGGenTest */ = {
 			isa = PBXGroup;
 			children = (
+				A65DDF582B16F46200A67FEC /* shapes.svg */,
 				A6F3B7822AF14C1A0058EC83 /* CGGenTestApp.swift */,
 				A6F3B7842AF14C1A0058EC83 /* ContentView.swift */,
+				A64956502B0ECF9800E889AB /* ContentViewModel.swift */,
 				A6F3B7862AF14C1B0058EC83 /* Assets.xcassets */,
 				A6F3B7882AF14C1B0058EC83 /* Preview Content */,
 			);
@@ -65,6 +91,14 @@
 				A6F3B7892AF14C1B0058EC83 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A6F3B7952AF2712A0058EC83 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A6F3B7962AF2712A0058EC83 /* cggen */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +117,13 @@
 			dependencies = (
 			);
 			name = CGGenTest;
+			packageProductDependencies = (
+				A6F3B7912AF160630058EC83 /* cggen-bc-runner */,
+				A6F3B7932AF160630058EC83 /* cggen */,
+				A65DDF522B16EF6900A67FEC /* Base */,
+				A65DDF542B16EF6900A67FEC /* BCRunner */,
+				A65DDF562B16EF6900A67FEC /* libcggen */,
+			);
 			productName = CGGenTest;
 			productReference = A6F3B77F2AF14C1A0058EC83 /* CGGenTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,9 @@
 				Base,
 			);
 			mainGroup = A6F3B7762AF14C1A0058EC83;
+			packageReferences = (
+				A6F3B7902AF160630058EC83 /* XCRemoteSwiftPackageReference "cggen" */,
+			);
 			productRefGroup = A6F3B7802AF14C1A0058EC83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F3B78A2AF14C1B0058EC83 /* Preview Assets.xcassets in Resources */,
+				A65DDF592B16F46200A67FEC /* shapes.svg in Resources */,
 				A6F3B7872AF14C1B0058EC83 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +184,7 @@
 			files = (
 				A6F3B7852AF14C1A0058EC83 /* ContentView.swift in Sources */,
 				A6F3B7832AF14C1A0058EC83 /* CGGenTestApp.swift in Sources */,
+				A64956512B0ECF9800E889AB /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,10 +241,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-v";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -249,9 +296,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-v";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -264,6 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CGGenTest/Preview Content\"";
@@ -275,13 +324,16 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-v";
 				PRODUCT_BUNDLE_IDENTIFIER = org.b1d2bd8fad073195.CGGenTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CGGenTest/Preview Content\"";
@@ -304,13 +357,16 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-v";
 				PRODUCT_BUNDLE_IDENTIFIER = org.b1d2bd8fad073195.CGGenTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +395,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A6F3B7902AF160630058EC83 /* XCRemoteSwiftPackageReference "cggen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yandex/cggen.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A65DDF522B16EF6900A67FEC /* Base */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6F3B7902AF160630058EC83 /* XCRemoteSwiftPackageReference "cggen" */;
+			productName = Base;
+		};
+		A65DDF542B16EF6900A67FEC /* BCRunner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6F3B7902AF160630058EC83 /* XCRemoteSwiftPackageReference "cggen" */;
+			productName = BCRunner;
+		};
+		A65DDF562B16EF6900A67FEC /* libcggen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6F3B7902AF160630058EC83 /* XCRemoteSwiftPackageReference "cggen" */;
+			productName = libcggen;
+		};
+		A6F3B7912AF160630058EC83 /* cggen-bc-runner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6F3B7902AF160630058EC83 /* XCRemoteSwiftPackageReference "cggen" */;
+			productName = "cggen-bc-runner";
+		};
+		A6F3B7932AF160630058EC83 /* cggen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6F3B7902AF160630058EC83 /* XCRemoteSwiftPackageReference "cggen" */;
+			productName = cggen;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A6F3B7772AF14C1A0058EC83 /* Project object */;
 }
