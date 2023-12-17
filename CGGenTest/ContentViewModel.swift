@@ -18,11 +18,28 @@ enum RequestError: Swift.Error {
 
 class ContentViewModel: ObservableObject {
 
+	enum ImageFormat {
+		case png
+		case svg
+	}
+
 	@Published var image: CGImage?
 
 	@MainActor
-	func generateImage() async {
-		image = try! await generateImageOutput()
+	func generateImage(format: ImageFormat) async {
+		switch format {
+		case .png:
+			let data = try! Data(contentsOf: Bundle.main.url(forResource: "shapes_png", withExtension: "png")!)
+			let clock = ContinuousClock()
+			var dataImage: UIImage?
+			let assetsImageResult = clock.measure {
+				dataImage = UIImage(data: data)
+			}
+			print("image from assets measure: \(assetsImageResult)")
+			image = dataImage?.cgImage
+		case .svg:
+			image = try! await generateImageOutput()
+		}
 	}
 
 	func generateImageOutput() async throws -> CGImage {
@@ -85,11 +102,6 @@ class ContentViewModel: ObservableObject {
 			context.makeImage()
 		}
 		print("image create measure: \(imageCreateResult)")
-
-		let assetsImageResult = clock.measure {
-			let _ = UIImage(named: "shapes")
-		}
-		print("image from assets measure: \(assetsImageResult)")
 
 		let resultSVGTime = parseResult + routinesResult + bytecodeResult + cgcontextCreateResult + runBytecodeResult + imageCreateResult
 		print("result SVG to CGImage conversion measure: \(resultSVGTime)")

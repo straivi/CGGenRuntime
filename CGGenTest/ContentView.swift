@@ -18,7 +18,7 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
 			Button(action: {
 				Task {
-					await viewModel.generateImage()
+					await viewModel.generateImage(format: .png)
 				}
 
 			}, label: {
@@ -33,7 +33,7 @@ struct ContentView: View {
 			})
             Text("Hello, world!")
 			if let image = viewModel.image {
-				Image(uiImage: UIImage(cgImage: image))
+				ImageViewWrapper(image: UIImage(cgImage: image))
 					.frame(width: 50, height: 50, alignment: .center)
 			}
         }
